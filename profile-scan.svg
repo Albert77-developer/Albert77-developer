@@ -1,0 +1,81 @@
+<svg xmlns="http://w3.org" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <!-- Efek Neon Menyala (Glow Effect) -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradasi Warna Garis Laser -->
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00ffcc" stop-opacity="1" />
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Animasi CSS Khusus yang Didukung GitHub via Gambar -->
+    <style>
+      @keyframes scan {
+        0% { transform: translateY(10px); }
+        50% { transform: translateY(370px); }
+        100% { transform: translateY(10px); }
+      }
+      @keyframes glitch {
+        0% { opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { opacity: 0.9; }
+      }
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      .laser-line {
+        animation: scan 4s linear infinite;
+        filter: url(#glow);
+      }
+      .grid-bg {
+        animation: glitch 1s ease infinite;
+      }
+      .hud-text {
+        font-family: 'Courier New', Courier, monospace;
+        fill: #00ffcc;
+        font-size: 14px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Gelap ala Terminal -->
+  <rect width="800" height="400" fill="#0d1117" rx="10" />
+
+  <!-- Struktur Grid Futuristik -->
+  <g class="grid-bg" opacity="0.15">
+    <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350" stroke="#00ffcc" stroke-width="1" />
+    <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400 M 400,0 L 400,400 M 500,0 L 500,400 M 600,0 L 600,400 M 700,0 L 700,400" stroke="#00ffcc" stroke-width="1" />
+  </g>
+
+  <!-- Bingkai Utama Dashboard -->
+  <rect x="20" y="20" width="760" height="360" fill="none" stroke="#00ffcc" stroke-width="2" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Ornamen Sudut Info Tech -->
+  <path d="M 20,50 L 20,20 L 50,20 M 780,50 L 780,20 L 750,20 M 20,350 L 20,380 L 50,380 M 780,350 L 780,380 L 750,380" fill="none" stroke="#00ffcc" stroke-width="4" />
+
+  <!-- Teks Statis / Simulasi Data Komputer -->
+  <text x="50" y="60" class="hud-text" font-weight="bold">> SYSTEM PROFILE INTRUSION SCAN</text>
+  <text x="50" y="100" class="hud-text" opacity="0.8">> USERNAME: Albert Afriando Santoso</text>
+  <text x="50" y="130" class="hud-text" opacity="0.6">> STATUS: Backend Developer</text>
+  <text x="50" y="160" class="hud-text" opacity="0.6">> CORE STACK: [REACT, NODE.js, PYTHON]</text>
+
+  <!-- Lingkaran Target Scan (Tempat Foto/Avatar) -->
+  <circle cx="550" cy="200" r="90" fill="none" stroke="#00ffcc" stroke-width="2" stroke-dasharray="10, 5" filter="url(#glow)" />
+  <circle cx="550" cy="200" r="75" fill="#1f2937" opacity="0.5"/>
+  <text x="515" y="205" class="hud-text" font-size="12">"<image href="https://avatars.githubusercontent.com/u/256280963?s=400&u=eccb719587fa432dacd8838cbc153038b9f250f0&v=4" x="475" y="125" height="150" width="150"/>" x="475" y="125" height="150" width="150"/></text>
+
+  <!-- GARIS LASER UTAMA (Yang Bergerak Mengikuti Animasi CSS) -->
+  <g class="laser-line">
+    <line x1="25" y1="0" x2="775" y2="0" stroke="url(#laserGrad)" stroke-width="8" />
+    <line x1="25" y1="0" x2="775" y2="0" stroke="#ffffff" stroke-width="1.5" opacity="0.8" />
+  </g>
+</svg>
