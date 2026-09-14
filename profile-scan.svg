@@ -71,8 +71,9 @@
   <!-- Lingkaran Target Scan (Tempat Foto/Avatar) -->
   <circle cx="550" cy="200" r="90" fill="none" stroke="#00ffcc" stroke-width="2" stroke-dasharray="10, 5" filter="url(#glow)" />
   <circle cx="550" cy="200" r="75" fill="#1f2937" opacity="0.5"/>
-  <text x="510" y="205" class="hud-text" font-size="12">[ AVATAR ]</text>
-  <image href="https://githubusercontent.com" x="475" y="125" height="150" width="150" clip-path="url(#avatarCircle)" />
+   <text x="510" y="205" class="hud-text" font-size="12">[ AVATAR ]</text>
+  <image href="foto albert.jpg" x="475" y="125" height="150" width="150" clip-path="url(#avatarCircle)" />
+
   <!-- GARIS LASER UTAMA (Yang Bergerak Mengikuti Animasi CSS) -->
   <g class="laser-line">
     <line x1="25" y1="0" x2="775" y2="0" stroke="url(#laserGrad)" stroke-width="8" />
